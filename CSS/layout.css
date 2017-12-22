@@ -1,0 +1,82 @@
+/* Resets and overrides */
+
+*{
+	box-sizing:border-box;
+	margin:0px;
+	border;0px;
+}
+
+img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+
+/*Layout -- General overrides and classes*/
+	width: 100%;
+	width: 100vw;
+
+body html {
+	width: 100%;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.flex-row{
+	display:flex;
+	flex-wrap:nowrap;
+	text-align:center;
+	justify-content:center;
+	
+}
+
+.flex-column{
+	display:flex;
+	flex-direction:column;
+}
+
+.placemark{
+	background-color:DodgerBlue;
+	margin: 5px;
+	padding: 5px;
+	text-align: left;
+	
+}
+
+#header h1{
+	text-align: center;
+}
+
+
+
+
+
+.footer p{
+	text-align: center;
+}
+/*Layout -- IDs*/
+
+
+/*link definitions */
+	ul {
+		list-style-type: none;
+		position:relative;
+	}
+
+	li a {
+		display: block;
+		padding: 8px 16px;
+		text-decoration: none;
+		position:relative;
+	}
+
+	
+	li a:hover {
+		
+	}
