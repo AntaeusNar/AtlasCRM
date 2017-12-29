@@ -61,14 +61,14 @@ function loadkml() {
 */
 
 	//loads the given kml into an xml with simplexml
-	$xml=simplexml_load_file("KML/history-2017-12-01.kml");
+	$xml=simplexml_load_file("/../KML/history-2017-12-01.kml");
 	
 	//error checking
 	if ($xml === false) {
 		//found some errors...list them out
-		echo "Failed loading xml: ";
+		$html = 'Failed loading xml: ';
 		foreach(libxml_get_errors() as $error) {
-			echo "<br>", $error->message;
+			$html .= '<br>' .$error->message;
 		}
 	} 
 	else {
