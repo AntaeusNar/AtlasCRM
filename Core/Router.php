@@ -4,7 +4,7 @@ class Router {
 	protected $routes = [];
 	
 	public Function add($route, $params) {
-		$this->routes[$route] = $parms;
+		$this->routes[$route] = $params;
 	}
 	
 	public Function getRoutes(){
