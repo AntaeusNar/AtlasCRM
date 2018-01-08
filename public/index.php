@@ -1,5 +1,15 @@
 <?php
+//starting the front controller//
 
+echo 'Requested URL = "' . $_SERVER['QUERY_STRING'] . '"';
+
+
+
+
+
+
+
+/* old code
 //Require Classes
 require_once "/../CLASSES/class.php";
 require_once "/../CONFIG/cfg.php";
@@ -26,5 +36,5 @@ include "/../HTML/templates/index.htm";
 //load footer.htm
 include "/../HTML/templates/footer.htm";
 
-
+end old code*/
 ?>
