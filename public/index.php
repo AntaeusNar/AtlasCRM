@@ -19,12 +19,22 @@ $router->add('',['controller' => 'Home', 'action' => 'index']);
 $router->add('posts', ['controller' => 'Posts', 'action' => 'index']);
 $router->add('posts/new', ['controller' => 'Posts', 'action' => 'new']);
 
-//Display the routing table
+/*Display the routing table
 echo '<pre>';
 var_dump($router->getRoutes());
 echo '</pre>';
+*/
 
+//Matching the requested route
+$url = $_SERVER['QUERY_STRING'];
 
+if($router->match($url)) {
+	echo '<pre>';
+	var_dump($router->getParams());
+	echo '</pre>';
+} else {
+	echo "No route found for URL '$url'";
+}
 
 
 
@@ -56,4 +66,5 @@ include "/../HTML/templates/index.htm";
 include "/../HTML/templates/footer.htm";
 
 end old code*/
+
 ?>
