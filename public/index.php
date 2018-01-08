@@ -7,11 +7,17 @@ require '../Core/Router.php';
 
 
 $router = new Router();
-echo get_class($router). "<br>";
+
+/* some debug
+echo "Class: " .get_class($router). " Loaded <br>";
 
 echo 'Requested URL = "' . $_SERVER['QUERY_STRING'] . '"';
+*/
 
-
+//Adding the routes multidimentional array with each route having a name, then a controller and finally an action
+$router->add('',['controller' => 'Home', 'action' => 'index']);
+$router->add('posts', ['controller' => 'Posts', 'action' => 'index']);
+$router->add('posts/new', ['controller' => 'Posts', 'action' => 'new']);
 
 
 
