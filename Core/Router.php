@@ -10,11 +10,13 @@ class Router {
 	public Function add($route, $params = []) {
 		
 		//Convert the route to a reg_exp
-		// 1: escape forward slashes
+		//escape forward slashes
 		$route = preg_replace('/\//', '\\/', $route);
-		// 2: Convert variables e.g. {controller}
+		//Convert variables e.g. {controller}
 		$route = preg_replace('/\{([a-z-]+)\}/', '(?P<\1>[a-z-]+)', $route);
-		// 3: Add start and end delimiter and case insensitve flag
+		//Convert variables with custome regular expressions e.g. {id:\d+}
+		$route = preg_replace('/\{([a-z]+):([^\}]+)\}/', '(?P<\1>\2)', $route);
+		//Add start and end delimiter and case insensitve flag
 		$route = '/^' . $route . '$/i';
 		
 		
