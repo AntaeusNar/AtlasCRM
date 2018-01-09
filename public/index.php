@@ -1,12 +1,17 @@
 <?php
 //starting the front controller//
 
-//Requires
-require '../App/Controllers/Home.php';
-require '../Core/Router.php';
+//Require Autoloader
+spl_autoload_register(function ($class) {
+	$root = dirname(__DIR__); //get the parent
+	$file = $root . '/' . str_replace('\\', '/', $class). '.php';
+	if (is_readable($file)) {
+		require $file;
+	}
+});
 
 
-$router = new Router();
+$router = new Core\Router();
 
 
 //Adding the routes multidimentional array with each route having a name, then a controller and finally an action
