@@ -67,8 +67,15 @@ class Router
 			if (class_exists($controller)) {
 				$controller_object = new $controller();
 				
-				$action = $this->params['action'];
-				$action = $this->convertToCamelCase($action);
+				//check to see if the $this->params['action'] index or key exsits and if not set the k$action to index
+				if (array_key_exists('action', $this->params)){
+					$action = $this->params['action'];
+					$action = $this->convertToCamelCase($action);
+					//make sure there is something in the action variables
+				} else {
+					$action = 'index';
+				}
+				
 				
 				if (is_callable([$controller_object, $action])) {
 					$controller_object->$action();
