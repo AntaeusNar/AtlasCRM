@@ -65,7 +65,7 @@ class Router
 			$controller = "App\Controllers\\$controller";
 		
 			if (class_exists($controller)) {
-				$controller_object = new $controller();
+				$controller_object = new $controller($this->params);
 				
 				//check to see if the $this->params['action'] index or key exsits and if not set the k$action to index
 				if (array_key_exists('action', $this->params)){
