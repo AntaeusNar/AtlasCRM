@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use \Core\View;
+
 class AisTime extends \Core\Controller
 {
 	
