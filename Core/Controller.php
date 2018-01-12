@@ -9,7 +9,7 @@ namespace Core;
 	
 abstract class Controller
 {
-
+	
 	//Parameters from the matched route @var array
 	protected $route_params = [];
 	
@@ -34,16 +34,22 @@ abstract class Controller
 		}
 	}
 	
+	
 	//called before the method
 	protected function before()
 	{
 		echo "(before)<br>";
-	}
+		
+		
+			}
+	
 	
 	//called after the method
 	protected function after()
 	{
 		echo "(after)";
+		
+		
 	}
 			
 }
