@@ -11,9 +11,9 @@ class Config
 	
 	//menu array
 	private static $MainMenuConfig = array(
-		'home' => array('text'=>'Home', 'url'=>'?p=home'),
-		'timetracker' => array('text'=>'Time Tracker', 'url'=>'?p=timetracker'),
-		'about'=> array('text'=>'About', 'url'=>'?p=about'),
+		'home' => array('text'=>'Home', 'url'=>''),
+		'timetracker' => array('text'=>'Time Tracker', 'url'=>'AisTime/index'),
+		'about'=> array('text'=>'About', 'url'=>'about/index'),
 	);
 	
 	//returns the mainmenu array
