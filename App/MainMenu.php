@@ -1,8 +1,9 @@
 <?php
 
+namespace App;
 
-
-class Menu {
+class MainMenu 
+{
 	//this class is a div flex box menu
 	
 	protected $htmlclass; //the class of the div
@@ -17,7 +18,8 @@ class Menu {
 	}
 	
 	//displays the created menu object
-	public function display() {
+	public function display() 
+	{
 		//generates div html
 		$html = "<div class='{$this->htmlclass}' id='{$this->htmlid}'>\n";
 		//generates each item html

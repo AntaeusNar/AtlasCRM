@@ -2,6 +2,9 @@
 
 namespace Core;
 
+use App\Config;
+use App\MainMenu;
+
 class View
 {
 	
@@ -11,17 +14,17 @@ class View
 		$file = "../App/Views/$view";  //relative to the Core directory
 		
 		if(is_readable($file)) {
-			require "../HTML/templates/header.htm";
-			/*
-			if ($menuBool = true){
+			require "../App/Views/HTMLtemplates/header.htm";
+			
+			if ($menuBool){
 				
-				$MainMenu = new Menu("flex-column", "nav-vert", $mainmenu);
+				$MainMenu = new MainMenu("flex-column", "nav-vert", Config::getArray());
 				echo $MainMenu->display();
 			}
-			*/
+			
 			
 			require $file;
-			require "../HTML/templates/footer.htm";
+			require "../App/Views/HTMLtemplates/footer.htm";
 		} else {
 			echo "$file not found.";
 		}

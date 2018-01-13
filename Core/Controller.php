@@ -38,7 +38,7 @@ abstract class Controller
 	//called before the method
 	protected function before()
 	{
-		echo "(before)<br>";
+		echo "(before controller code)<br>";
 		
 		
 			}
@@ -47,7 +47,7 @@ abstract class Controller
 	//called after the method
 	protected function after()
 	{
-		echo "(after)";
+		echo "(after controller code)";
 		
 		
 	}
