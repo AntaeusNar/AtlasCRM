@@ -41,7 +41,7 @@ abstract class Controller
 		echo "(before controller code)<br>";
 		
 		
-			}
+	}
 	
 	
 	//called after the method
@@ -51,7 +51,7 @@ abstract class Controller
 		
 		
 	}
-			
+
 }
 
 ?>
