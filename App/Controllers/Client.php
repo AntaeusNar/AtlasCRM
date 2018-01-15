@@ -10,7 +10,9 @@ class Client extends \Core\Controller
 {
 	public function indexAction()
 	{
-		View::render('Clients/index.php');
+		$clients = Clients::getAll();
+		
+		View::render('Clients/index.php', true, $clients);
 	}
 }
 ?>

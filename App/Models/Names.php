@@ -9,7 +9,7 @@ class Names extends \Core\Model
 {
 	
 	
-	//get all the names from the name table inside the dba_close
+	//get all the names from the name table inside the database
 	public static function getAll()
 	{
 		try {

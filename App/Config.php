@@ -24,7 +24,7 @@ class Config
 	
 	private static $ClientMenuConfig = array(
 		'new' => array('text'=>'New', 'url'=>'../client/new'),
-		'list' => array('text'=>'List', 'url'=>'../client/list'),
+		'list' => array('text'=>'List', 'url'=>'../client/index'),
 	);
 	
 	//returns the mainmenu array

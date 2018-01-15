@@ -23,7 +23,9 @@ class View
 			}
 			
 			//pull the file asked for
+			echo '<div class="flex-column">';
 			require $file;
+			echo '</div>';
 			require "../App/Views/HTMLtemplates/footer.htm";
 		} else {
 			echo "$file not found.";
