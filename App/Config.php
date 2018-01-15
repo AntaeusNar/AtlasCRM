@@ -16,15 +16,16 @@ class Config
 	//mainmenu array
 	private static $MainMenuConfig = array(
 		'home' => array('text'=>'Home', 'url'=>'../home/index'),
-		'client' => array('text'=>'Client', 'url'=>'../client/index'),
+		'client' => array('text'=>'Clients', 'url'=>'../client/index'),
 		'timetracker' => array('text'=>'Time Tracker', 'url'=>'../AisTime/index'),
 		'name' => array('text'=>'Names', 'url'=>'../name/index'),
 		'about'=> array('text'=>'About', 'url'=>'../about/index'),
 	);
 	
 	private static $ClientMenuConfig = array(
-		'new' => array('text'=>'New', 'url'=>'../client/new'),
-		'list' => array('text'=>'List', 'url'=>'../client/index'),
+		'newcontact' => array('text'=>'New Contact', 'url'=>'../client/newContact'),
+		'newjob' => array('text'=>'New Job', 'url'=>'../client/newJob'),
+		'list' => array('text'=>'List Current', 'url'=>'../client/index'),
 	);
 	
 	//returns the mainmenu array
