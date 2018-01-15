@@ -19,7 +19,7 @@
 		echo $html;
 		
 		$html = "<select name='first_name'>";
-		while ($row = $data) 
+		foreach ($data as $row) 
 		{
 		$html .= '<option value' . $row['name_id'] . '>' . $row['first_name'] . '</option>';
 		}
