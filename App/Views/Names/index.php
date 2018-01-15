@@ -17,6 +17,15 @@
 		
 		$html .= '</div>';
 		echo $html;
+		
+		$html = "<select name='first_name'>";
+		while ($row = $data) 
+		{
+		$html .= '<option value' . $row['name_id'] . '>' . $row['first_name'] . '</option>';
+		}
+		$html .= '</select>';
+		
+		echo $html;
 		?>
 		
 
