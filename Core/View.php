@@ -3,7 +3,7 @@
 namespace Core;
 
 use App\Config;
-use App\MainMenu;
+use App\Menu;
 
 class View
 {
@@ -18,11 +18,11 @@ class View
 			
 			if ($menuBool){
 				
-				$MainMenu = new MainMenu("flex-column", "nav-vert", Config::getArray());
+				$MainMenu = new Menu("flex-column", "nav-vert", Config::getArray('MainMenu'));
 				echo $MainMenu->display();
 			}
 			
-			
+			//pull the file asked for
 			require $file;
 			require "../App/Views/HTMLtemplates/footer.htm";
 		} else {

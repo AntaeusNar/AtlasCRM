@@ -1,5 +1,6 @@
 <?php
 
+//controller
 namespace App\Controllers;
 
 use \Core\View;

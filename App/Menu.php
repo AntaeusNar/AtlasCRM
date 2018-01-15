@@ -2,7 +2,7 @@
 
 namespace App;
 
-class MainMenu 
+class Menu 
 {
 	//this class is a div flex box menu
 	
@@ -27,7 +27,7 @@ class MainMenu
 			$html .= "<a href='{$item['url']}'>{$item['text']}</a>\n";
 		}
 		//closes div html
-		$html .="\n</div>\n";
+		$html .="</div>\n";
 		return $html;
 	}
 }

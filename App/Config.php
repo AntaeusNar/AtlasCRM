@@ -13,7 +13,7 @@ class Config
 	
 	
 	
-	//menu array
+	//mainmenu array
 	private static $MainMenuConfig = array(
 		'home' => array('text'=>'Home', 'url'=>'../home/index'),
 		'client' => array('text'=>'Client', 'url'=>'../client/index'),
@@ -22,10 +22,22 @@ class Config
 		'about'=> array('text'=>'About', 'url'=>'../about/index'),
 	);
 	
+	private static $ClientMenuConfig = array(
+		'new' => array('text'=>'New', 'url'=>'../client/new'),
+		'list' => array('text'=>'List', 'url'=>'../client/list'),
+	);
+	
 	//returns the mainmenu array
-	public static function getArray()
+	public static function getArray($array)
 	{
-		return Config::$MainMenuConfig;
+		switch ($array) {
+			case "MainMenu":
+				return Config::$MainMenuConfig;
+				break;
+			case "ClientMenu":
+				return Config::$ClientMenuConfig;
+				break;
+		}
 	}
 }
 ?>
