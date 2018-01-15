@@ -10,7 +10,7 @@ class AisTime extends \Core\Controller
 	//renders index.php
 	public function indexAction()
 	{
-		View::render('AisTime/index.php', true);
+		View::render('AisTime/index.php');
 		
 	}
 	

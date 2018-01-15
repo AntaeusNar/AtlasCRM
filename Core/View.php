@@ -9,7 +9,7 @@ class View
 {
 	
 	//renders the view file
-	public static function render($view, $menuBool)
+	public static function render($view, $menuBool = true, $data = null)
 	{
 		$file = "../App/Views/$view";  //relative to the Core directory
 		
