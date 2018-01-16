@@ -26,11 +26,11 @@ function showhide(a)
 <h2>Add a Contact</h2>
 
 <div>
-	<button onclick="showhide(1);"> New Company</button>
-	<button onclick="showhide(2)"> New Person</button>
+	<button name="form_choice" value="corp" onclick="showhide(1)"> New Company</button>
+	<button name="form_choice" value="person" onclick="showhide(2)"> New Person</button>
 </div>
 
-<form method="post">
+<form id="contact" method="post">
 
 	<fieldset>
 		<legend>Personal Information</legend>

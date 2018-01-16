@@ -47,5 +47,11 @@ class Clients extends \Core\Model
 			echo $e->getMessage();
 		}
 	}
+	
+	//add a new contacts
+	public function addContact()
+	{
+		echo htmlspecialchars(print_r($_POST, True));
+	}
 }
 ?>

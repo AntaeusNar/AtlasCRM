@@ -4,7 +4,7 @@
 namespace App\Controllers;
 
 use \Core\View;
-use App\Models\Clients;
+use \App\Models\Clients;
 
 class Client extends \Core\Controller
 {
@@ -20,6 +20,11 @@ class Client extends \Core\Controller
 	public function newContactAction()
 	{
 		View::render('Clients/newContact.php', true);
+		if(isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'Submit') {
+			echo '<pre>';
+			echo htmlspecialchars(print_r($_POST, True));
+			echo '</pre>';
+		}
 	}
 	
 	public function listContactsAction()
