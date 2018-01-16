@@ -25,7 +25,8 @@ class Config
 	private static $ClientMenuConfig = array(
 		'newcontact' => array('text'=>'New Contact', 'url'=>'../client/newContact'),
 		'newjob' => array('text'=>'New Job', 'url'=>'../client/newJob'),
-		'list' => array('text'=>'List Current', 'url'=>'../client/index'),
+		'listclient' => array('text'=>'List Current Clients', 'url'=>'../client/index'),
+		'liscontact' => array('text'=>'List Current Contacts', 'url'=>'../client/listContacts'),
 	);
 	
 	//returns the mainmenu array
