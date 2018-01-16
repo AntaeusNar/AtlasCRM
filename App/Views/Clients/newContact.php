@@ -60,19 +60,19 @@ function showhide(a)
 			<legend>Personal Address</legend>
 				<div>
 					<label for="street">Street</label>
-					<input type="text" name="street" id="street">
+					<input type="text" name="p_street" id="street">
 				</div>
 				<div>
 					<label for="city">City</label>
-					<input type="text" name="city" id="city">
+					<input type="text" name="p_city" id="city">
 				</div>
 				<div>
 					<label for="zip">Zip Code</label>
-					<input type="text" name="zip" id="zip">
+					<input type="text" name="p_zip" id="zip">
 				</div>
 				<div>
 					<label for="state_adrv">State</label>
-					<input type="text" name="state_adrv" id="state_adrv">
+					<input type="text" name="p_state_adrv" id="state_adrv">
 				</div>
 			</fieldset>
 		</div>
