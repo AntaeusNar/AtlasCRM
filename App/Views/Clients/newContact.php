@@ -9,81 +9,122 @@ $ClientMenu = new Menu("flex-row", "nav-hort", Config::getArray('ClientMenu'));
 echo $ClientMenu->display();
 
 ?>
-
+<script>
+function showhide(a)
+{
+	//window.alert("is this working");
+    if(a==1) {
+    document.getElementById("person").style.display="none";
+	document.getElementById("corp").style.display="block";
+    } else {
+		
+    document.getElementById("person").style.display="block";
+	document.getElementById("corp").style.display="none";
+	}
+}
+</script>
 <h2>Add a Contact</h2>
 
+<div>
+	<button onclick="showhide(1);"> New Company</button>
+	<button onclick="showhide(2)"> New Person</button>
+</div>
+
 <form method="post">
-<ul>
+
 	<fieldset>
 		<legend>Personal Information</legend>
-			<li>
+			<div>
 				<label for="first_name">Full Name</label>
 				<input type="text" name="first_name" id="first_name" placeholder="first name">
 				<input type="text" name="last_name" id="last_name" placeholder="last name">
-			</li>
-			<li>
+			</div>
+			<div>
 				<label for="email">Email Address</label>
 				<input type="text" name="email" id="email">
-			</li>
-			<li>
+			</div>
+			<div>
 				<label for="phone">Phone Number</label>
 				<input type="text" name="phone" id="phone">
-			</li>
-			<li>
+			</div>
+			<div>
 				<label for="mobile">Mobile Number</label>
 				<input type="text" name="mobile" id="mobile">
-			</li>
-			<li>
+			</div>
+			<div>
 				<label for="fax">Fax Number</label>
 				<input type="text" name="fax" id="fax">
-			</li>
+			</div>
+		<div id="person" style="display: none;">
+		<fieldset>
+			<legend>Personal Address</legend>
+				<div>
+					<label for="street">Street</label>
+					<input type="text" name="street" id="street">
+				</div>
+				<div>
+					<label for="city">City</label>
+					<input type="text" name="city" id="city">
+				</div>
+				<div>
+					<label for="zip">Zip Code</label>
+					<input type="text" name="zip" id="zip">
+				</div>
+				<div>
+					<label for="state_adrv">State</label>
+					<input type="text" name="state_adrv" id="state_adrv">
+				</div>
+			</fieldset>
+		</div>
 	</fieldset>	
 	
+	<div id="corp">
 	<fieldset>
 		<legend>Company Information</legend>
-			<li>
+			<div>
 				<label for="company_name">Company Name</label>
 				<input type="text" name="company_name" id="company_name">
 				<label for="DBA">DBA</label>
 				<input type="text" name="DBA" id="DBA">
-			</li>
-			<li>
+			</div>
+			<div>
 				<label for="corp_phone">Main Office Phone</label>
 				<input type="text" name="corp_phone" id="corp_phone">
-			</li>
-			<li>
+			</div>
+			<div>
 				<label for="corp_fax">Main Office Fax</label>
 				<input type="text" name="corp_fax" id="corp_fax">
-			</li>
-			<li>
+			</div>
+			<div>
 				<label for="corp_website">Company Website</label>
 				<input type="text" name="corp_website" id="corp_website">
-			</li>
+			</div>
 			
 			<fieldset>
 				<legend>Company Address</legend>
-					<li>
+					<div>
 						<label for="street">Street</label>
 						<input type="text" name="street" id="street">
-					</li>
-					<li>
+					</div>
+					<div>
 						<label for="city">City</label>
 						<input type="text" name="city" id="city">
-					</li>
-					<li>
+					</div>
+					<div>
 						<label for="zip">Zip Code</label>
 						<input type="text" name="zip" id="zip">
-					</li>
-					<li>
+					</div>
+					<div>
 						<label for="state_adrv">State</label>
 						<input type="text" name="state_adrv" id="state_adrv">
-					</li>
+					</div>
 				
 			</fieldset>
 			
 	</fieldset>
+	</div>
 	
 	
 	<input type="submit" name="submit" value="Submit">
-</ul>
+
 </form>
