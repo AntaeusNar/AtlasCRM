@@ -19,6 +19,7 @@ class Client extends \Core\Controller
 	
 	public function newContactAction()
 	{
+		View::render('Clients/newContact.php', true);
 	}
 }
 ?>
