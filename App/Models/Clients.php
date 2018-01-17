@@ -49,9 +49,11 @@ class Clients extends \Core\Model
 	}
 	
 	//add a new contacts
-	public function addContact()
+	public static function addContact()
 	{
+		echo '<pre>';
 		echo htmlspecialchars(print_r($_POST, True));
+		echo '</pre>';
 	}
 }
 ?>
